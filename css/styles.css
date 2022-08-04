@@ -1,0 +1,47 @@
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+container.flex-column label {
+  text-align: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-jc-sa {
+  justify-content: space-around;
+}
+
+.grid-cols-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: 50% 1fr 1fr; */
+}
+
+button {
+  max-width: 25%;
+  max-height: 1.5rem;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-direction-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-ai-center {
+  align-items: center;
+}
+
+input {
+  max-width: 25%;
+}
