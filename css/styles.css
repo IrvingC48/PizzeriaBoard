@@ -7,6 +7,10 @@ container.flex-column label {
   text-align: center;
 }
 
+container.flex-center input {
+  justify-content: center;
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;

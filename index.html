@@ -11,36 +11,39 @@
         <label id="label1">
             Pizza básica
         </label>
-        <input/>
+        <input id="valorPB" type="number"/>
         <label>
             Pizza 2 ingredientes
         </label>
-        <input/>
+        <input id="valorP2I" type="number"/>
         <label>
             Pizza 3 ingredientes
         </label>
-        <input/>
+        <input id="valorP3I" type="number"/>
         <label>
             Refresco chico
         </label>
-        <input/>
+        <input id="valorRC" type="number"/>
         <label>
             Refresco grande
         </label>
+        <input id="valorRG" type="number"/>
     </container>
     <container class="grid-cols-2">
         <div class="flex-center flex-ai-center">
-            <button>
+            <button id="miBoton">
                 Calcular
             </button>
         </div>
         <div class="flex-center flex-direction-column">
             <label>PRECIO</label>
-            <label>0</label>
+            <label id="precio">0</label>
         </div>
     </container>
 
-    <script src="./js/test.js" type="module"></script>
+    <!-- <script src="./js/test.js" type="module"></script> -->
+    <script src="./js/funcionPizzeria.js" type="module"></script>
+    <!-- <script src="./js/exampleDom.js" type="module"></script> -->
     <!-- Cargando código JavaScript como tipo módulo -->
 </body>
 </html>
