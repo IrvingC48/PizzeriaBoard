@@ -22,7 +22,6 @@ const calculo_precio = (PB, P2I, P3I, RC, RG) => {
       console.log(calculo_precio(PB, P2I, P3I, RC, RG));
     };
 
-    document.getElementById("miBoton").addEventListener('click', calculo_precio(1,2,3,0,1));
       if (P2I > 0) {
         T = (10 + 2) * 0.85;
         promocion = true;
@@ -49,6 +48,7 @@ const calculo_precio = (PB, P2I, P3I, RC, RG) => {
   return T;
 };
 
+//Almacenar precioFinal en localStorage
 const onClickButton = () => {
   const PB = document.getElementById("valorPB").value;
   const P2I = document.getElementById("valorP2I").value;
@@ -57,7 +57,28 @@ const onClickButton = () => {
   const RG = document.getElementById("valorRG").value;
 
   const precioFinal = calculo_precio(Number(PB), Number(P2I), Number(P3I), Number(RC), Number(RG));
-  document.getElementById("precio").textContent = precioFinal;
+  //CREATE
+  //UPDATE -- En este caso se utiliza de la misma manera setItem. Considerar que no es igual en todos
+  //los ámbitos de almacenamiento de datos
+
+  localStorage.setItem('precioFL', precioFinal);
+  //READ usando getItem
+  document.getElementById("precio").textContent = localStorage.getItem('precioFL');
+  // sessionStorage.setItem('precioFS', precioFinal);
+
 };
 
 document.getElementById("miBoton").addEventListener('click', onClickButton);
+
+const onClear = () => {
+  //DELETE usando .clear()
+  localStorage.clear()
+  // sessionStorage.clear()
+};
+
+const cargarDato = () => {
+  document.getElementById("precio").textContent = localStorage.getItem('precioFL');
+}
+
+document.getElementById('miBotonClear').addEventListener('click', onClear);
+document.getElementById('miBody').addEventListener('load', cargarDato);
